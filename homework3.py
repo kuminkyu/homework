@@ -15,7 +15,7 @@ songs = soup.select('tr.list')
 i=1
 for song in songs:
 
-    a_tag = song.select('td.info > a')[0].text
+    a_tag = song.select('td.info > a')[0].text.strip()
     td_tag = song.select('td.info > a')[1].text
 
     print(i,a_tag,td_tag)
